@@ -55,7 +55,7 @@ main {
                 font-size: 4rem;
                 font-weight: bolder;
                 color: $septimo-color;
-            filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+                filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
             }
 
             p {
@@ -82,9 +82,6 @@ main {
                     color: $sexto-color;
                     background: $cuarto-color;
                     letter-spacing: .2rem;
-                    // text-shadow: 0 0 10px #fff,
-                    //     0 0 10px #fff,
-                    //     0 0 1px #fff;
                 }
             }
         }
@@ -417,10 +414,10 @@ form input:focus~.barra::before {
         transition: .4s linear;
 
         &:hover {
-            background: linear-gradient(to right, $sexto-color,$quinto-color);
+            background: linear-gradient(to right, $sexto-color, $quinto-color);
             border-radius: 6px;
             letter-spacing: 3px;
-        // font-weight: bold;
+            // font-weight: bold;
 
         }
     }
