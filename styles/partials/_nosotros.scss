@@ -1,0 +1,67 @@
+#grilla {
+
+    h3 {
+        font-weight: bold;
+        filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+        font-size: 45px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    @include grid();
+
+    .history,
+    .vision,
+    .mision {
+        .img_history {
+            width: 400px;
+            height: auto;
+            margin: 0 20px;
+            filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+        }
+
+        @include flexRow()
+    }
+
+    .history_content,
+    .vision_content,
+    .mision_content {
+        width: 100%;
+        height: auto;
+        margin: 30px 30px;
+        // padding: 0 15px;
+    }
+
+    .nuestrovalor {
+        background-color: $quinto-color;
+        padding-bottom: 20px;
+        border-radius: 6px;
+        filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+        .imgvalor {
+            padding: 0 30px;
+            margin-top: 20px;
+            filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+        }
+    }
+
+    .valores {
+        
+
+        h3 {
+            text-align: center;
+            padding: 30px;
+        }
+
+        ul {
+            list-style-image: url(/assets/img/vineta.png);
+            padding-left: 45px;
+
+            li {
+                margin-bottom: 10px;
+                font-size: 20px;
+            }
+        }
+    }
+}

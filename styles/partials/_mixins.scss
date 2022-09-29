@@ -1,0 +1,22 @@
+@mixin grid {
+    display: grid;
+    grid-template-areas:
+        "section aside"
+        ;
+        margin: 30px 0;
+    padding:0 30px;
+    flex-wrap: wrap;
+}
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

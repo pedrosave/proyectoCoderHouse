@@ -1,0 +1,444 @@
+@import "./partials/headerFooter", "./partials/mixins", "./partials/nosotros", "./partials/productos";
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: auto;
+    height: 100vh;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+
+/* inicio main */
+main {
+    min-height: 100vh;
+    width: 100%;
+    background: $sexto-color;
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $septimo-color;
+}
+
+/* fin main */
+
+/* inicio de pagina de inicio */
+
+#contenidoResena {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+    flex-wrap: wrap;
+
+    .contentResena {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .reseña {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 0 30px;
+            margin: 0 30px;
+
+            h2 {
+                font-size: 4rem;
+                font-weight: bolder;
+                color: $septimo-color;
+            filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+            }
+
+            p {
+                font-size: 1.5rem;
+                text-align: justify;
+                color: $septimo-color;
+            }
+
+            a {
+                width: 120px;
+                text-decoration: none;
+                background: $quinto-color;
+                border-radius: 6px;
+                text-align: center;
+                font-weight: bold;
+                padding: 10px 7px;
+                margin-top: 30px;
+                color: $septimo-color;
+                letter-spacing: .1rem;
+                transition: .5s linear;
+
+                &:hover {
+                    width: 140px;
+                    color: $sexto-color;
+                    background: $cuarto-color;
+                    letter-spacing: .2rem;
+                    // text-shadow: 0 0 10px #fff,
+                    //     0 0 10px #fff,
+                    //     0 0 1px #fff;
+                }
+            }
+        }
+    }
+}
+
+.video {
+    width: 300px;
+    height: 300px;
+}
+
+.productos {
+    width: 74%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 50px 0;
+
+    .img-products {
+        width: auto;
+        height: 493px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #30303070,
+            0 0 10px #30303070,
+            0 0 1px #30303070;
+
+        &:hover .foto {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px #30303070,
+                0 0 10px #30303070,
+                0 0 1px #30303070;
+        }
+    }
+
+    .img-products1 {
+        width: auto;
+        height: 533.31px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #30303070,
+            0 0 10px #30303070,
+            0 0 1px #30303070;
+
+        &:hover .fotog {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.productos {
+
+    #f1 {
+        background: url(../assets/img/nintendo.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+    }
+
+    #f2 {
+        background: url(../assets/img/xbox1.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+    }
+
+    #f3 {
+        background: url(../assets/img/play1.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+    }
+}
+
+.productos {
+    .foto {
+        width: 394px;
+        height: 493px;
+        transition: .5s;
+    }
+
+    .fotog {
+        width: 426.66px;
+        height: 533.31px;
+        transition: .5s;
+    }
+}
+
+.text {
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow: 0 0 10px #30303070,
+        0 0 10px #30303070,
+        0 0 1px #30303070;
+
+    color: $octavo-color;
+    position: absolute;
+    top: 420px;
+    width: 100%;
+
+    h4 {
+        margin: 0 0 6px;
+        font-weight: bold;
+    }
+}
+
+.textg {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #26262670,
+        0 0 10px #26262670,
+        0 0 1px #26262670;
+    text-align: center;
+    color: $octavo-color;
+    position: absolute;
+    top: 440px;
+    width: 100%;
+
+    h4 {
+        margin: 0 0 6px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .productos {
+        flex-wrap: wrap;
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contentResena {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+/* fin pagina de inio */
+
+/* inicio de Registrate */
+
+.reg {
+    color: $septimo-color;
+    font-size: 40px;
+    font-weight: 1000;
+    filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+}
+
+#registrate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.imgregistrate {
+    width: 900px;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    margin: 15px 30px;
+    border-radius: 6px;
+}
+
+.regcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 30px;
+}
+
+form {
+
+    .grupo,
+    .terminos {
+        position: relative;
+        margin: 45px;
+    }
+
+    input {
+        background: none;
+        font-size: 16px;
+        padding: 10px 10px 0px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1.5px solid $quinto-color;
+
+        &:focus {
+            outline: none;
+            color: $septimo-color;
+        }
+    }
+
+    label {
+        color: $septimo-color;
+        font-size: 18px;
+        position: absolute;
+        left: 5px;
+        top: 0;
+        transition: .5s ease all;
+        pointer-events: none;
+    }
+
+    input:focus~label,
+    input:valid~label {
+        top: -10px;
+        font-size: 15px;
+        color: #000;
+    }
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    &::before {
+        content: "";
+        height: 2px;
+        width: 0%;
+        bottom: 0;
+        position: absolute;
+        background: linear-gradient(to left, $sexto-color, $septimo-color);
+        transition: .5s ease width;
+    }
+}
+
+form input:focus~.barra::before {
+    width: 100%;
+}
+
+.buttonreg {
+    letter-spacing: .1em;
+    text-align: center;
+    display: block;
+    width: 75%;
+    margin: 10px auto;
+    color: $septimo-color;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    background: $quinto-color;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: .5s linear;
+
+    &:hover {
+        letter-spacing: .2em;
+        // text-shadow: 0 0 10px #fff,
+        //     0 0 10px #fff,
+        //     0 0 20px #fff;
+        background: $cuarto-color;
+        color: $sexto-color;
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    #registrate {
+        flex-wrap: wrap;
+    }
+}
+
+/* inicio de contactanos */
+#encuentranos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $septimo-color;
+}
+
+.imgencuentranos {
+    width: 70%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 40px;
+}
+
+.datosencuentranos {
+    width: 80%;
+    height: auto;
+    text-align: center;
+    margin: 20px 0 45px 0;
+
+    ul {
+        list-style: none;
+    }
+
+    .titcontact {
+        font-weight: bolder;
+        margin-bottom: 30px;
+        filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+
+    }
+}
+
+#encuentranos {
+
+    .linkcontact {
+        padding: 10px;
+    }
+
+    a {
+        color: $septimo-color;
+        text-decoration: none;
+        font-size: 20px;
+        letter-spacing: 2px;
+        transition: .4s linear;
+
+        &:hover {
+            background: linear-gradient(to right, $sexto-color,$quinto-color);
+            border-radius: 6px;
+            letter-spacing: 3px;
+        // font-weight: bold;
+
+        }
+    }
+
+    .subcontact {
+        margin: 40px 0 10px 0;
+        padding: 10px 0 10px 0;
+        font-weight: bold;
+    }
+
+    .listaubi {
+        margin: 15px 0 15px 0;
+        color: $septimo-color;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 20px;
+
+    }
+}
+
+// fin de contactanos

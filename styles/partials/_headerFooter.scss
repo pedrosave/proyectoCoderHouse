@@ -1,0 +1,65 @@
+@import "./colors";
+
+#inicio {
+    height: auto;
+    background: $primer-color;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+}
+
+footer {
+    height: auto;
+    background: $segundo-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $septimo-color;
+    padding: 20px 35px;
+    font-family: 'Lexend Deca', sans-serif;
+    flex-wrap: wrap-reverse;
+
+    h6 {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    #redes {
+        display: flex;
+        align-items: center;
+        width: 200px;
+        justify-content: space-around;
+        font-size: 35px;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: $septimo-color;
+            font-weight: bolder;
+            transition: .4s linear;
+            // align-items: center;
+            text-align: center;
+            &:hover {
+                color: $noveno-color;
+                font-size: 40px;
+                text-align: center;
+                text-shadow: 0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 40px #fff;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .rs {
+        width: 60px;
+        height: 60px;
+        background: $sexto-color;
+        border-radius: 5rem;
+        filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+        transition: .5s linear;
+        &:hover {
+            background: $septimo-color;
+            filter: none;
+        }
+    }
+}

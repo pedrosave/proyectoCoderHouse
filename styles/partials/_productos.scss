@@ -1,0 +1,96 @@
+.container_cards {
+    max-width: 1200px;
+    margin: 20px auto;
+    margin: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 0 5rem;
+
+    .card_consola {
+        width: 300px;
+        transition: all .3s linear;
+
+        &:hover {
+            width: 340px;
+
+            .cover img {
+                top: 0px;
+                filter: none;
+            }
+
+            .description_card {
+                padding: 40px;
+            }
+        }
+
+        .img_back {
+            width: 100%;
+            height: 200px;
+            bottom: -40px;
+            background-image: url(/assets/img/back.jpg);
+            position: absolute;
+            bottom: -80px;
+            left: 0;
+            background-size: cover;
+            border-radius: 15px;
+            transition: all .3s linear;
+        }
+
+        .description_card {
+            background: $octavo-color;
+            margin-top: -10px;
+            padding: 20px;
+            border-radius: 0px 0px 15px 15px;
+            transition: all .3s linear;
+
+            input {
+                padding: 5px 35px;
+                margin-top: 20px;
+                border: none;
+                background: $quinto-color;
+                color: $septimo-color;
+                font-weight: bold;
+                font-size: 16px;
+                border-radius: 6px;
+                transition: all .5s linear;
+
+                &:hover {
+                    background: $cuarto-color ;
+                }
+            }
+
+            h2 {
+                margin-top: 10px;
+                font-size: 23px;
+                font-weight: bolder;
+                filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+            }
+        }
+
+        .cover {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+
+            img {
+                width: 250px;
+                margin: auto;
+                display: block;
+                position: relative;
+                top: 40px;
+                z-index: 1;
+                filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+                transition: all .6s linear;
+            }
+        }
+    }
+}
+
+video {
+    width: 80%;
+    margin-top: 60px;
+    border-radius: 6px;
+}

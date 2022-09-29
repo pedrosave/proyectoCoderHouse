@@ -1,0 +1,576 @@
+@charset "UTF-8";
+#inicio {
+  height: auto;
+  background: #083D77;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: bold;
+}
+
+footer {
+  height: auto;
+  background: #F95738;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+  padding: 20px 35px;
+  font-family: "Lexend Deca", sans-serif;
+  flex-wrap: wrap-reverse;
+}
+footer h6 {
+  margin: 8px 0;
+  font-size: 16px;
+}
+footer #redes {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  justify-content: space-around;
+  font-size: 35px;
+  text-align: center;
+}
+footer #redes a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bolder;
+  transition: 0.4s linear;
+  text-align: center;
+}
+footer #redes a:hover {
+  color: #dddddd;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+  font-weight: bolder;
+}
+footer .rs {
+  width: 60px;
+  height: 60px;
+  background: #EBEBD3;
+  border-radius: 5rem;
+  filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+  transition: 0.5s linear;
+}
+footer .rs:hover {
+  background: #000000;
+  filter: none;
+}
+
+#grilla {
+  display: grid;
+  grid-template-areas: "section aside";
+  margin: 30px 0;
+  padding: 0 30px;
+  flex-wrap: wrap;
+}
+#grilla h3 {
+  font-weight: bold;
+  filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+  font-size: 45px;
+}
+#grilla p {
+  font-size: 20px;
+}
+#grilla .history,
+#grilla .vision,
+#grilla .mision {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#grilla .history .img_history,
+#grilla .vision .img_history,
+#grilla .mision .img_history {
+  width: 400px;
+  height: auto;
+  margin: 0 20px;
+  filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+}
+#grilla .history_content,
+#grilla .vision_content,
+#grilla .mision_content {
+  width: 100%;
+  height: auto;
+  margin: 30px 30px;
+}
+#grilla .nuestrovalor {
+  background-color: #EDC18F;
+  padding-bottom: 20px;
+  border-radius: 6px;
+  filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+}
+#grilla .nuestrovalor .imgvalor {
+  padding: 0 30px;
+  margin-top: 20px;
+  filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+}
+#grilla .valores h3 {
+  text-align: center;
+  padding: 30px;
+}
+#grilla .valores ul {
+  list-style-image: url(/assets/img/vineta.png);
+  padding-left: 45px;
+}
+#grilla .valores ul li {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.container_cards {
+  max-width: 1200px;
+  margin: 20px auto;
+  margin: 60px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 0 5rem;
+}
+.container_cards .card_consola {
+  width: 300px;
+  transition: all 0.3s linear;
+}
+.container_cards .card_consola:hover {
+  width: 340px;
+}
+.container_cards .card_consola:hover .cover img {
+  top: 0px;
+  filter: none;
+}
+.container_cards .card_consola:hover .description_card {
+  padding: 40px;
+}
+.container_cards .card_consola .img_back {
+  width: 100%;
+  height: 200px;
+  bottom: -40px;
+  background-image: url(/assets/img/back.jpg);
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  background-size: cover;
+  border-radius: 15px;
+  transition: all 0.3s linear;
+}
+.container_cards .card_consola .description_card {
+  background: #ffffff;
+  margin-top: -10px;
+  padding: 20px;
+  border-radius: 0px 0px 15px 15px;
+  transition: all 0.3s linear;
+}
+.container_cards .card_consola .description_card input {
+  padding: 5px 35px;
+  margin-top: 20px;
+  border: none;
+  background: #EDC18F;
+  color: #000000;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: all 0.5s linear;
+}
+.container_cards .card_consola .description_card input:hover {
+  background: #EE964B;
+}
+.container_cards .card_consola .description_card h2 {
+  margin-top: 10px;
+  font-size: 23px;
+  font-weight: bolder;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+}
+.container_cards .card_consola .cover {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+.container_cards .card_consola .cover img {
+  width: 250px;
+  margin: auto;
+  display: block;
+  position: relative;
+  top: 40px;
+  z-index: 1;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+  transition: all 0.6s linear;
+}
+
+video {
+  width: 80%;
+  margin-top: 60px;
+  border-radius: 6px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: auto;
+  height: 100vh;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/* inicio main */
+main {
+  min-height: 100vh;
+  width: 100%;
+  background: #EBEBD3;
+  font-family: "Lexend Deca", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000000;
+}
+
+/* fin main */
+/* inicio de pagina de inicio */
+#contenidoResena {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0;
+  flex-wrap: wrap;
+}
+#contenidoResena .contentResena {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#contenidoResena .contentResena .reseña {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 30px;
+  margin: 0 30px;
+}
+#contenidoResena .contentResena .reseña h2 {
+  font-size: 4rem;
+  font-weight: bolder;
+  color: #000000;
+  filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+}
+#contenidoResena .contentResena .reseña p {
+  font-size: 1.5rem;
+  text-align: justify;
+  color: #000000;
+}
+#contenidoResena .contentResena .reseña a {
+  width: 120px;
+  text-decoration: none;
+  background: #EDC18F;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 7px;
+  margin-top: 30px;
+  color: #000000;
+  letter-spacing: 0.1rem;
+  transition: 0.5s linear;
+}
+#contenidoResena .contentResena .reseña a:hover {
+  width: 140px;
+  color: #EBEBD3;
+  background: #EE964B;
+  letter-spacing: 0.2rem;
+}
+
+.video {
+  width: 300px;
+  height: 300px;
+}
+
+.productos {
+  width: 74%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 50px 0;
+}
+.productos .img-products {
+  width: auto;
+  height: 493px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 1px rgba(48, 48, 48, 0.4392156863);
+}
+.productos .img-products:hover .foto {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 1px rgba(48, 48, 48, 0.4392156863);
+}
+.productos .img-products1 {
+  width: auto;
+  height: 533.31px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 1px rgba(48, 48, 48, 0.4392156863);
+}
+.productos .img-products1:hover .fotog {
+  transform: scale(1.1);
+}
+
+.productos #f1 {
+  background: url(../assets/img/nintendo.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+.productos #f2 {
+  background: url(../assets/img/xbox1.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+.productos #f3 {
+  background: url(../assets/img/play1.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.productos .foto {
+  width: 394px;
+  height: 493px;
+  transition: 0.5s;
+}
+.productos .fotog {
+  width: 426.66px;
+  height: 533.31px;
+  transition: 0.5s;
+}
+
+.text {
+  font-size: 1.5em;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 1px rgba(48, 48, 48, 0.4392156863);
+  color: #ffffff;
+  position: absolute;
+  top: 420px;
+  width: 100%;
+}
+.text h4 {
+  margin: 0 0 6px;
+  font-weight: bold;
+}
+
+.textg {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(38, 38, 38, 0.4392156863), 0 0 10px rgba(38, 38, 38, 0.4392156863), 0 0 1px rgba(38, 38, 38, 0.4392156863);
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  top: 440px;
+  width: 100%;
+}
+.textg h4 {
+  margin: 0 0 6px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+  .productos {
+    flex-wrap: wrap;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #contentResena {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+/* fin pagina de inio */
+/* inicio de Registrate */
+.reg {
+  color: #000000;
+  font-size: 40px;
+  font-weight: 1000;
+  filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+}
+
+#registrate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.imgregistrate {
+  width: 900px;
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  margin: 15px 30px;
+  border-radius: 6px;
+}
+
+.regcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 30px;
+}
+
+form .grupo,
+form .terminos {
+  position: relative;
+  margin: 45px;
+}
+form input {
+  background: none;
+  font-size: 16px;
+  padding: 10px 10px 0px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px solid #EDC18F;
+}
+form input:focus {
+  outline: none;
+  color: #000000;
+}
+form label {
+  color: #000000;
+  font-size: 18px;
+  position: absolute;
+  left: 5px;
+  top: 0;
+  transition: 0.5s ease all;
+  pointer-events: none;
+}
+form input:focus ~ label,
+form input:valid ~ label {
+  top: -10px;
+  font-size: 15px;
+  color: #000;
+}
+
+.barra {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.barra::before {
+  content: "";
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to left, #EBEBD3, #000000);
+  transition: 0.5s ease width;
+}
+
+form input:focus ~ .barra::before {
+  width: 100%;
+}
+
+.buttonreg {
+  letter-spacing: 0.1em;
+  text-align: center;
+  display: block;
+  width: 75%;
+  margin: 10px auto;
+  color: #000000;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  background: #EDC18F;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.5s linear;
+}
+.buttonreg:hover {
+  letter-spacing: 0.2em;
+  background: #EE964B;
+  color: #EBEBD3;
+  width: 85%;
+}
+
+@media screen and (max-width: 900px) {
+  #registrate {
+    flex-wrap: wrap;
+  }
+}
+/* inicio de contactanos */
+#encuentranos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000000;
+}
+
+.imgencuentranos {
+  width: 70%;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 40px;
+}
+
+.datosencuentranos {
+  width: 80%;
+  height: auto;
+  text-align: center;
+  margin: 20px 0 45px 0;
+}
+.datosencuentranos ul {
+  list-style: none;
+}
+.datosencuentranos .titcontact {
+  font-weight: bolder;
+  margin-bottom: 30px;
+  filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+}
+
+#encuentranos .linkcontact {
+  padding: 10px;
+}
+#encuentranos a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+  transition: 0.4s linear;
+}
+#encuentranos a:hover {
+  background: linear-gradient(to right, #EBEBD3, #EDC18F);
+  border-radius: 6px;
+  letter-spacing: 3px;
+}
+#encuentranos .subcontact {
+  margin: 40px 0 10px 0;
+  padding: 10px 0 10px 0;
+  font-weight: bold;
+}
+#encuentranos .listaubi {
+  margin: 15px 0 15px 0;
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 20px;
+}/*# sourceMappingURL=styles.css.map */
