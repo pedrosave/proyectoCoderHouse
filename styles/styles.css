@@ -234,13 +234,10 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 25px 0;
-  flex-wrap: wrap;
 }
 #contenidoResena .contentResena {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  flex-wrap: wrap;
 }
 #contenidoResena .contentResena .reseña {
   width: 60%;
@@ -248,7 +245,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   padding: 0 30px;
-  margin: 0 30px;
+  margin: 30px;
 }
 #contenidoResena .contentResena .reseña h2 {
   font-size: 4rem;
@@ -282,8 +279,11 @@ main {
 }
 
 .video {
-  width: 300px;
-  height: 300px;
+  width: 600px;
+  height: 350px;
+  margin: 35px;
+  border-radius: 6px;
+  filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
 }
 
 .productos {
@@ -291,11 +291,11 @@ main {
   height: auto;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
   align-items: center;
   text-align: center;
   position: relative;
   padding: 50px 0;
+  gap: 30px;
 }
 .productos .img-products {
   width: auto;
@@ -306,12 +306,15 @@ main {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 1px rgba(48, 48, 48, 0.4392156863);
+  border-radius: 6px;
+  filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+  transition: linear 0.4s;
+}
+.productos .img-products:hover {
+  filter: none;
 }
 .productos .img-products:hover .foto {
   transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 1px rgba(48, 48, 48, 0.4392156863);
 }
 .productos .img-products1 {
   width: auto;
@@ -322,13 +325,16 @@ main {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 1px rgba(48, 48, 48, 0.4392156863);
+  border-radius: 6px;
+  filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+  transition: linear 0.4s;
+}
+.productos .img-products1:hover {
+  filter: none;
 }
 .productos .img-products1:hover .fotog {
   transform: scale(1.1);
 }
-
 .productos #f1 {
   background: url(../assets/img/nintendo.jpg);
   background-size: cover;
@@ -347,7 +353,6 @@ main {
   background-position: center;
   border-radius: 5px;
 }
-
 .productos .foto {
   width: 394px;
   height: 493px;
@@ -388,21 +393,6 @@ main {
   font-weight: bold;
 }
 
-@media screen and (max-width: 1024px) {
-  .productos {
-    flex-wrap: wrap;
-    gap: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #contentResena {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-}
 /* fin pagina de inio */
 /* inicio de Registrate */
 .reg {
@@ -416,7 +406,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 30px;
+  padding: 20px 0px;
+  flex-wrap: wrap;
 }
 
 .imgregistrate {
@@ -424,7 +415,7 @@ main {
   height: 700px;
   background-size: cover;
   background-position: center;
-  margin: 15px 30px;
+  margin: 15px 20px;
   border-radius: 6px;
 }
 
@@ -511,9 +502,47 @@ form input:focus ~ .barra::before {
   width: 85%;
 }
 
-@media screen and (max-width: 900px) {
-  #registrate {
-    flex-wrap: wrap;
+@media screen and (max-width: 1280px) {
+  .imgregistrate {
+    width: 800px;
+    height: 600px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .imgregistrate {
+    width: 700px;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .imgregistrate {
+    width: 600px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .imgregistrate {
+    width: 450px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .imgregistrate {
+    width: 350px;
+    height: 175px;
+    margin: 15px 20px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .imgregistrate {
+    width: 220px;
+    height: 110px;
+    margin: 15px 20px;
+  }
+}
+@media screen and (max-width: 300px) {
+  label {
+    font-size: 15px;
   }
 }
 /* inicio de contactanos */
