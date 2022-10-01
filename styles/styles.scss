@@ -63,6 +63,8 @@ main {
 
             .link-container {
 
+                margin-top: 20px;
+
                 a {
                     text-decoration: none;
                     background: $quinto-color;
@@ -70,7 +72,6 @@ main {
                     text-align: center;
                     font-weight: bold;
                     padding: 8px 16px;
-                    margin-top: 30px;
                     color: $septimo-color;
                     letter-spacing: .1rem;
                     transition: .5s linear;
@@ -102,50 +103,92 @@ main {
     align-items: center;
     text-align: center;
     position: relative;
-    padding: 50px 0;
+    padding: 50px 30px;
     gap: 30px;
+    flex-wrap: wrap;
 
-    .img-products {
-        width: auto;
-        height: 493px;
+    .img-pro{
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        position: relative;
-        overflow: hidden;
-        cursor: pointer;
-        border-radius: 6px;
-        filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
-        transition: linear .4s;
-
-        &:hover {
-            filter: none;
+        .img-products {
+            width: auto;
+            height: 493px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 6px;
+            filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+            transition: linear .4s;
+    
+    
+            &:hover {
+                filter: none;
+            }
+    
+            &:hover .foto {
+                transform: scale(1.1);
+            }
+    
+            .text {
+                font-size: 1.5em;
+                text-align: center;
+                text-shadow: 0 0 10px #30303070,
+                    0 0 10px #30303070,
+                    0 0 1px #30303070;
+    
+                color: $octavo-color;
+                position: absolute;
+                top: 420px;
+                width: 100%;
+    
+                h4 {
+                    margin: 0 0 6px;
+                    font-weight: bold;
+                }
+            }
         }
-
-        &:hover .foto {
-            transform: scale(1.1);
-        }
-    }
-
-    .img-products1 {
-        width: auto;
-        height: 533.31px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
-        cursor: pointer;
-        border-radius: 6px;
-        filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
-        transition: linear .4s;
-
-        &:hover {
-            filter: none;
-        }
-
-        &:hover .fotog {
-            transform: scale(1.1);
+    
+        .img-products1 {
+            width: auto;
+            height: 533.31px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 6px;
+            filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+            transition: linear .4s;
+    
+    
+            &:hover {
+                filter: none;
+            }
+    
+            &:hover .fotog {
+                transform: scale(1.1);
+            }
+            .textg {
+                font-size: 1.5em;
+                font-weight: bold;
+                text-shadow: 0 0 10px #26262670,
+                    0 0 10px #26262670,
+                    0 0 1px #26262670;
+                text-align: center;
+                color: $octavo-color;
+                position: absolute;
+                top: 440px;
+                width: 100%;
+            
+                h4 {
+                    margin: 0 0 6px;
+                    font-weight: bold;
+                }
+            }
         }
     }
 
@@ -183,39 +226,22 @@ main {
     }
 }
 
-.text {
-    font-size: 1.5em;
-    text-align: center;
-    text-shadow: 0 0 10px #30303070,
-        0 0 10px #30303070,
-        0 0 1px #30303070;
 
-    color: $octavo-color;
-    position: absolute;
-    top: 420px;
-    width: 100%;
 
-    h4 {
-        margin: 0 0 6px;
-        font-weight: bold;
+
+
+@media screen and (max-width:1350px) {
+    .contentResena {
+        flex-direction: column;
     }
-}
 
-.textg {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-shadow: 0 0 10px #26262670,
-        0 0 10px #26262670,
-        0 0 1px #26262670;
-    text-align: center;
-    color: $octavo-color;
-    position: absolute;
-    top: 440px;
-    width: 100%;
+    .video {
+        padding: 0 30px;
+        border-radius: 6px;
+    }
 
-    h4 {
-        margin: 0 0 6px;
-        font-weight: bold;
+    .img-pro {
+        width: 100%;
     }
 }
 

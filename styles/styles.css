@@ -321,6 +321,9 @@ main {
   text-align: justify;
   color: #000000;
 }
+#contenidoResena .contentResena .reseña .link-container {
+  margin-top: 20px;
+}
 #contenidoResena .contentResena .reseña .link-container a {
   text-decoration: none;
   background: #EDC18F;
@@ -328,7 +331,6 @@ main {
   text-align: center;
   font-weight: bold;
   padding: 8px 16px;
-  margin-top: 30px;
   color: #000000;
   letter-spacing: 0.1rem;
   transition: 0.5s linear;
@@ -355,10 +357,15 @@ main {
   align-items: center;
   text-align: center;
   position: relative;
-  padding: 50px 0;
+  padding: 50px 30px;
   gap: 30px;
+  flex-wrap: wrap;
 }
-.productos .img-products {
+.productos .img-pro {
+  display: flex;
+  justify-content: center;
+}
+.productos .img-pro .img-products {
   width: auto;
   height: 493px;
   display: flex;
@@ -371,13 +378,26 @@ main {
   filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
   transition: linear 0.4s;
 }
-.productos .img-products:hover {
+.productos .img-pro .img-products:hover {
   filter: none;
 }
-.productos .img-products:hover .foto {
+.productos .img-pro .img-products:hover .foto {
   transform: scale(1.1);
 }
-.productos .img-products1 {
+.productos .img-pro .img-products .text {
+  font-size: 1.5em;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 1px rgba(48, 48, 48, 0.4392156863);
+  color: #ffffff;
+  position: absolute;
+  top: 420px;
+  width: 100%;
+}
+.productos .img-pro .img-products .text h4 {
+  margin: 0 0 6px;
+  font-weight: bold;
+}
+.productos .img-pro .img-products1 {
   width: auto;
   height: 533.31px;
   display: flex;
@@ -390,11 +410,25 @@ main {
   filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
   transition: linear 0.4s;
 }
-.productos .img-products1:hover {
+.productos .img-pro .img-products1:hover {
   filter: none;
 }
-.productos .img-products1:hover .fotog {
+.productos .img-pro .img-products1:hover .fotog {
   transform: scale(1.1);
+}
+.productos .img-pro .img-products1 .textg {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(38, 38, 38, 0.4392156863), 0 0 10px rgba(38, 38, 38, 0.4392156863), 0 0 1px rgba(38, 38, 38, 0.4392156863);
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  top: 440px;
+  width: 100%;
+}
+.productos .img-pro .img-products1 .textg h4 {
+  margin: 0 0 6px;
+  font-weight: bold;
 }
 .productos #f1 {
   background: url(../assets/img/nintendo.jpg);
@@ -425,35 +459,18 @@ main {
   transition: 0.5s;
 }
 
-.text {
-  font-size: 1.5em;
-  text-align: center;
-  text-shadow: 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 10px rgba(48, 48, 48, 0.4392156863), 0 0 1px rgba(48, 48, 48, 0.4392156863);
-  color: #ffffff;
-  position: absolute;
-  top: 420px;
-  width: 100%;
+@media screen and (max-width: 1350px) {
+  .contentResena {
+    flex-direction: column;
+  }
+  .video {
+    padding: 0 30px;
+    border-radius: 6px;
+  }
+  .img-pro {
+    width: 100%;
+  }
 }
-.text h4 {
-  margin: 0 0 6px;
-  font-weight: bold;
-}
-
-.textg {
-  font-size: 1.5em;
-  font-weight: bold;
-  text-shadow: 0 0 10px rgba(38, 38, 38, 0.4392156863), 0 0 10px rgba(38, 38, 38, 0.4392156863), 0 0 1px rgba(38, 38, 38, 0.4392156863);
-  text-align: center;
-  color: #ffffff;
-  position: absolute;
-  top: 440px;
-  width: 100%;
-}
-.textg h4 {
-  margin: 0 0 6px;
-  font-weight: bold;
-}
-
 /* fin pagina de inio */
 /* inicio de Registrate */
 .reg {
