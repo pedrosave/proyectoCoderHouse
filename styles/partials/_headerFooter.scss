@@ -5,6 +5,34 @@
     background: $primer-color;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: bold;
+
+    .logo {
+        .logoCelular {
+            display: none;
+            width: auto;
+            height: 60px;
+        }
+
+        .logoPrincipal {
+            display: block;
+            height: 60px;
+        }
+    }
+}
+
+@media screen and (max-width:540px) {
+    #inicio {
+        .logo {
+            .logoCelular {
+                display: block;
+
+            }
+
+            .logoPrincipal {
+                display: none;
+            }
+        }
+    }
 }
 
 footer {
@@ -16,7 +44,7 @@ footer {
     color: $septimo-color;
     padding: 20px 35px;
     font-family: 'Lexend Deca', sans-serif;
-    flex-wrap: wrap-reverse;
+    flex-wrap: nowrap;
 
     h6 {
         margin: 8px 0;
@@ -38,6 +66,7 @@ footer {
             transition: .4s linear;
             // align-items: center;
             text-align: center;
+
             &:hover {
                 color: $noveno-color;
                 font-size: 40px;
@@ -57,9 +86,24 @@ footer {
         border-radius: 5rem;
         filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
         transition: .5s linear;
+
         &:hover {
             background: $septimo-color;
             filter: none;
+        }
+    }
+}
+
+@media screen and (max-width:650px) {
+
+    footer {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        #redes {
+            padding-bottom: 20px;
         }
     }
 }

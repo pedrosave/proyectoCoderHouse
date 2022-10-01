@@ -94,3 +94,10 @@ video {
     margin-top: 60px;
     border-radius: 6px;
 }
+
+@media screen and (max-width:540px) {
+
+    video {
+        display: none;
+    }
+}

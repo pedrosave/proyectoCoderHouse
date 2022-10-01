@@ -9,14 +9,13 @@
 
 body {
     width: auto;
-    height: 100vh;
     font-family: 'Lexend Deca', sans-serif;
-}
 
+}
 
 /* inicio main */
 main {
-    min-height: 100vh;
+    min-height: calc(100vh - 86px - 154px);
     width: 100%;
     background: $sexto-color;
     font-family: 'Lexend Deca', sans-serif;
@@ -24,6 +23,7 @@ main {
     flex-direction: column;
     align-items: center;
     color: $septimo-color;
+
 }
 
 /* fin main */
@@ -61,24 +61,25 @@ main {
                 color: $septimo-color;
             }
 
-            a {
-                width: 120px;
-                text-decoration: none;
-                background: $quinto-color;
-                border-radius: 6px;
-                text-align: center;
-                font-weight: bold;
-                padding: 10px 7px;
-                margin-top: 30px;
-                color: $septimo-color;
-                letter-spacing: .1rem;
-                transition: .5s linear;
+            .link-container {
 
-                &:hover {
-                    width: 140px;
-                    color: $sexto-color;
-                    background: $cuarto-color;
-                    letter-spacing: .2rem;
+                a {
+                    text-decoration: none;
+                    background: $quinto-color;
+                    border-radius: 6px;
+                    text-align: center;
+                    font-weight: bold;
+                    padding: 8px 16px;
+                    margin-top: 30px;
+                    color: $septimo-color;
+                    letter-spacing: .1rem;
+                    transition: .5s linear;
+
+                    &:hover {
+                        color: $sexto-color;
+                        background: $cuarto-color;
+                        letter-spacing: .2rem;
+                    }
                 }
             }
         }
@@ -234,7 +235,7 @@ main {
     justify-content: center;
     align-items: center;
     padding: 20px 0px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .imgregistrate {
@@ -250,6 +251,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 30px;
     margin: 15px 30px;
 }
 
@@ -316,12 +318,11 @@ form input:focus~.barra::before {
 
 .buttonreg {
     letter-spacing: .1em;
+    padding: 8px 16px;
     text-align: center;
     display: block;
-    width: 75%;
     margin: 10px auto;
     color: $septimo-color;
-    height: 40px;
     font-size: 20px;
     cursor: pointer;
     background: $quinto-color;
@@ -337,65 +338,47 @@ form input:focus~.barra::before {
         //     0 0 20px #fff;
         background: $cuarto-color;
         color: $sexto-color;
-        width: 85%;
     }
 }
 
-@media screen and (max-width:1280px) {
-    .imgregistrate {
-        width: 800px;
-        height: 600px;
-    }
-}
-
-@media screen and (max-width:820px) {
-    .imgregistrate {
-        width: 700px;
-        height: 500px;
-    }
-}
-
-@media screen and (max-width:780px) {
+@media screen and (max-width:1350px) {
+    #registrate {
+        flex-direction: column;
+        padding: 0 2rem;
 
         .imgregistrate {
-            width: 600px;
-            height: 400px;
+            width: 100%;
+            height: auto;
         }
+    }
 }
 
 @media screen and (max-width:540px) {
-    
-        .imgregistrate {
-            width: 450px;
-            height: 250px;
-        }
-}
-
-@media screen and (max-width:390px) {
+    #registrate {
 
         .imgregistrate {
-            width: 350px;
-            height: 175px;
-            margin: 15px 20px;
+            display: none;
         }
-}
-
-@media screen and (max-width:300px) {
-
-        .imgregistrate {
-            width: 220px;
-            height: 110px;
-            margin: 15px 20px;
-        }
-}
-
-@media screen and (max-width:300px) {
-
-    label {
-        font-size: 15px;
     }
 }
 
+@media screen and (max-width:388px) {
+    .reg {
+        font-size: 30px;
+    }
+
+    .buttonreg {
+        font-size: 15px;
+    }
+
+    form {
+
+        label {
+            font-size: 13px;
+
+        }
+    }
+}
 
 /* inicio de contactanos */
 #encuentranos {
@@ -417,6 +400,7 @@ form input:focus~.barra::before {
     width: 80%;
     height: auto;
     text-align: center;
+    padding-top: 35px;
     margin: 20px 0 45px 0;
 
     ul {
@@ -466,6 +450,12 @@ form input:focus~.barra::before {
         letter-spacing: 2px;
         font-size: 20px;
 
+    }
+}
+
+@media screen and (max-width:540px) {
+    .imgencuentranos {
+        display: none;
     }
 }
 

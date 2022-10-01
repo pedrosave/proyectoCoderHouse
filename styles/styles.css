@@ -5,7 +5,24 @@
   font-family: "Lexend Deca", sans-serif;
   font-weight: bold;
 }
+#inicio .logo .logoCelular {
+  display: none;
+  width: auto;
+  height: 60px;
+}
+#inicio .logo .logoPrincipal {
+  display: block;
+  height: 60px;
+}
 
+@media screen and (max-width: 540px) {
+  #inicio .logo .logoCelular {
+    display: block;
+  }
+  #inicio .logo .logoPrincipal {
+    display: none;
+  }
+}
 footer {
   height: auto;
   background: #F95738;
@@ -15,7 +32,7 @@ footer {
   color: #000000;
   padding: 20px 35px;
   font-family: "Lexend Deca", sans-serif;
-  flex-wrap: wrap-reverse;
+  flex-wrap: nowrap;
 }
 footer h6 {
   margin: 8px 0;
@@ -56,6 +73,17 @@ footer .rs:hover {
   filter: none;
 }
 
+@media screen and (max-width: 650px) {
+  footer {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  footer #redes {
+    padding-bottom: 20px;
+  }
+}
 #grilla {
   display: grid;
   grid-template-areas: "section aside";
@@ -71,19 +99,13 @@ footer .rs:hover {
 #grilla p {
   font-size: 20px;
 }
-#grilla .history,
-#grilla .vision,
-#grilla .mision {
+#grilla .info-conatiner {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-#grilla .history .img_history,
-#grilla .vision .img_history,
-#grilla .mision .img_history {
-  width: 400px;
-  height: auto;
-  margin: 0 20px;
+#grilla .info-conatiner .img_history {
+  height: 400px;
   filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
 }
 #grilla .history_content,
@@ -91,7 +113,12 @@ footer .rs:hover {
 #grilla .mision_content {
   width: 100%;
   height: auto;
-  margin: 30px 30px;
+  padding: 30px 30px;
+}
+#grilla .history_content p,
+#grilla .vision_content p,
+#grilla .mision_content p {
+  text-align: justify;
 }
 #grilla .nuestrovalor {
   background-color: #EDC18F;
@@ -104,19 +131,51 @@ footer .rs:hover {
   margin-top: 20px;
   filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
 }
-#grilla .valores h3 {
+#grilla .nuestrovalor .valores h3 {
   text-align: center;
   padding: 30px;
 }
-#grilla .valores ul {
+#grilla .nuestrovalor .valores ul {
   list-style-image: url(/assets/img/vineta.png);
   padding-left: 45px;
 }
-#grilla .valores ul li {
+#grilla .nuestrovalor .valores ul li {
   margin-bottom: 10px;
   font-size: 20px;
 }
 
+@media screen and (max-width: 1350px) {
+  #grilla {
+    display: flex;
+    flex-direction: column;
+  }
+  #grilla .img_history {
+    height: auto;
+  }
+  .nuestrovalor {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .info-conatiner:nth-child(odd) {
+    flex-direction: column-reverse !important;
+  }
+  .info-conatiner:nth-child(even) {
+    flex-direction: column !important;
+  }
+  .info-conatiner .img_history {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .nuestrovalor {
+    flex-direction: column-reverse;
+  }
+  .nuestrovalor .imgvalor {
+    width: 100%;
+  }
+}
 .container_cards {
   max-width: 1200px;
   margin: 20px auto;
@@ -203,6 +262,11 @@ video {
   border-radius: 6px;
 }
 
+@media screen and (max-width: 540px) {
+  video {
+    display: none;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -211,13 +275,12 @@ video {
 
 body {
   width: auto;
-  height: 100vh;
   font-family: "Lexend Deca", sans-serif;
 }
 
 /* inicio main */
 main {
-  min-height: 100vh;
+  min-height: calc(100vh - 86px - 154px);
   width: 100%;
   background: #EBEBD3;
   font-family: "Lexend Deca", sans-serif;
@@ -258,21 +321,19 @@ main {
   text-align: justify;
   color: #000000;
 }
-#contenidoResena .contentResena .reseña a {
-  width: 120px;
+#contenidoResena .contentResena .reseña .link-container a {
   text-decoration: none;
   background: #EDC18F;
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
-  padding: 10px 7px;
+  padding: 8px 16px;
   margin-top: 30px;
   color: #000000;
   letter-spacing: 0.1rem;
   transition: 0.5s linear;
 }
-#contenidoResena .contentResena .reseña a:hover {
-  width: 140px;
+#contenidoResena .contentResena .reseña .link-container a:hover {
   color: #EBEBD3;
   background: #EE964B;
   letter-spacing: 0.2rem;
@@ -407,7 +468,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 20px 0px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .imgregistrate {
@@ -423,6 +484,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 30px;
   margin: 15px 30px;
 }
 
@@ -481,12 +543,11 @@ form input:focus ~ .barra::before {
 
 .buttonreg {
   letter-spacing: 0.1em;
+  padding: 8px 16px;
   text-align: center;
   display: block;
-  width: 75%;
   margin: 10px auto;
   color: #000000;
-  height: 40px;
   font-size: 20px;
   cursor: pointer;
   background: #EDC18F;
@@ -499,50 +560,32 @@ form input:focus ~ .barra::before {
   letter-spacing: 0.2em;
   background: #EE964B;
   color: #EBEBD3;
-  width: 85%;
 }
 
-@media screen and (max-width: 1280px) {
-  .imgregistrate {
-    width: 800px;
-    height: 600px;
+@media screen and (max-width: 1350px) {
+  #registrate {
+    flex-direction: column;
+    padding: 0 2rem;
   }
-}
-@media screen and (max-width: 820px) {
-  .imgregistrate {
-    width: 700px;
-    height: 500px;
-  }
-}
-@media screen and (max-width: 780px) {
-  .imgregistrate {
-    width: 600px;
-    height: 400px;
+  #registrate .imgregistrate {
+    width: 100%;
+    height: auto;
   }
 }
 @media screen and (max-width: 540px) {
-  .imgregistrate {
-    width: 450px;
-    height: 250px;
+  #registrate .imgregistrate {
+    display: none;
   }
 }
-@media screen and (max-width: 390px) {
-  .imgregistrate {
-    width: 350px;
-    height: 175px;
-    margin: 15px 20px;
+@media screen and (max-width: 388px) {
+  .reg {
+    font-size: 30px;
   }
-}
-@media screen and (max-width: 300px) {
-  .imgregistrate {
-    width: 220px;
-    height: 110px;
-    margin: 15px 20px;
-  }
-}
-@media screen and (max-width: 300px) {
-  label {
+  .buttonreg {
     font-size: 15px;
+  }
+  form label {
+    font-size: 13px;
   }
 }
 /* inicio de contactanos */
@@ -565,6 +608,7 @@ form input:focus ~ .barra::before {
   width: 80%;
   height: auto;
   text-align: center;
+  padding-top: 35px;
   margin: 20px 0 45px 0;
 }
 .datosencuentranos ul {
@@ -602,4 +646,10 @@ form input:focus ~ .barra::before {
   text-decoration: none;
   letter-spacing: 2px;
   font-size: 20px;
+}
+
+@media screen and (max-width: 540px) {
+  .imgencuentranos {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */
